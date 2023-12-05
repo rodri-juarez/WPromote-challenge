@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React, {useState} from 'react'
-import {useSearchParams} from 'next/navigation'
+import {notFound, useSearchParams} from 'next/navigation'
 import {ProductsEdge} from '../lib/types/products'
 import {Alert} from '@material-tailwind/react'
 import Link from 'next/link'
@@ -25,12 +25,8 @@ const ProductDetail = () => {
    */
   // To convert the component in a server component one option could be send the product data in query params
 
-  if (isError) {
-    return <span>Error: {error?.message}</span>
-  }
-
-  if (!product) {
-    return <span>Error: Product not exist</span>
+  if (isError || !product) {
+    return notFound()
   }
 
   return (
