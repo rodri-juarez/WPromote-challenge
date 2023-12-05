@@ -1,4 +1,4 @@
-export interface ProductsList {
+export interface ProductList {
   products: Products;
 }
 
@@ -42,4 +42,17 @@ export interface Price {
 
 export enum CurrencyCode {
   CAD = "CAD",
+}
+
+export interface GetProductListResponse {
+  data: {
+    products: Products
+  }
+}
+
+
+export interface GetProductResponse {
+  data: {
+    product: Product
+  }
 }
