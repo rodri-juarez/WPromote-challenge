@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WPromote (ecommerce)
 
-## Getting Started
+WPromote is a web application that allows users to browse through a list of products and view details of each individual product.
 
-First, run the development server:
+PD: THE DESKTOP VERSION IS THE ONLY ONE AVAILABLE.
+
+_Desktop_
+
+<p align="center" width="100%">
+<img  src="https://i.ibb.co/hcK69dY/Captura-desde-2023-12-05-12-03-57.png" width="360" height='240'>
+<img  src="https://i.ibb.co/9pgsZxf/Captura-desde-2023-12-05-12-03-38.png" width="360" height='240'>
+</p>
+
+## Link to WebApp
+
+[Deploy](https://w-promote-challenge.vercel.app/)
+
+### Features
+
+* Product List: The main page displays a list of available products. Each product in the list includes an image, the product name, and the price.
+
+* Product Details Page: By clicking on a product from the list, users are redirected to a product details page. This page displays detailed information about the product, including a full description, available sizes, and the price.
+
+### Technologies
+
+<br/>
+<ul align="start">
+
+- <a href="https://nextjs.org/" target="_blank"> <img src="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png" alt="MaterialUI" width="40" height="40" /> Next.js</a>
+
+- <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> Typescript</a>
+
+- <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/800px-React.svg.png" alt="typescript" width="40" height="35"/> React</a>
+
+- <a href="https://tailwindcss.com/" target="_blank"> <img src="https://files.raycast.com/nwt9ncojkvwmjfkaada8upafvpnu" alt="typescript" width="40" height="40"/> Tailwind</a>
+
+- <a href="https://tanstack.com/query/v3/" target="_blank"> <img src="https://miro.medium.com/v2/resize:fit:1400/1*elhu-42TzQEdsFjKDbQhhA.png" alt="typescript" width="40" height="40"/> React Query</a>
+
+</ul>
+<br/>
+<br/>
+
+### Installation
+
+To run this project use the commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  yarn && yarn dev
+  npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tests
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The tests were performed with _Cypress_ to E2E tests, to run the tests use the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn cypress:open or npm run cypress:open
+```
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+Node Version : > 15v
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
