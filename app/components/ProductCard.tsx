@@ -8,13 +8,19 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
+import {Product} from "../lib/types/products";
 
-export function ProductCard() {
+interface ProductCardProps {
+  product: Product
+}
+
+export function ProductCard({product}: ProductCardProps) {
+
   return (
     <Card className="w-96">
       <CardHeader shadow={false} floated={false} className="h-96">
         <Image
-          src={'https://cdn.shopify.com/s/files/1/0688/1755/1382/products/slides.jpg?v=1675447358'}
+          src={product.featuredImage?.url}
           alt="card-image"
           width={600}
           height={600}
@@ -24,32 +30,33 @@ export function ProductCard() {
       <CardBody>
         <div className="mb-2 flex items-center justify-between">
           <Typography color="blue-gray" className="font-medium">
-            Apple AirPods
+            {product.title}
           </Typography>
           <Typography color="blue-gray" className="font-medium">
-            $95.00
+            $99.00
           </Typography>
         </div>
-        <Typography
-          variant="small"
-          color="gray"
-          className="font-normal opacity-75"
+        <p
+          className="font-normal opacity-75 line-clamp-3 h-16"
         >
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
-        </Typography>
+          {product.description}
+        </p>
       </CardBody>
       <CardFooter className="pt-0">
-        <Link href={'/products'}>
+        <Link href={{
+          pathname: `${product.title}`,
+          query: {id: product.id},
+        }}>
           <Button
             ripple={false}
             fullWidth={true}
             className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
           >
-            See more
+            View product
           </Button>
         </Link>
       </CardFooter>
     </Card>
   );
 }
+
