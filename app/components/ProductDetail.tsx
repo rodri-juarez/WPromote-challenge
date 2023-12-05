@@ -13,17 +13,16 @@ const ProductDetail = () => {
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState('XS');
 
-
   const searchParams = useSearchParams()
 
-  const id: string = searchParams.get('id')!
+  const id = searchParams.get('id') ?? '';
 
   const {product, isError, error} = useProduct(id)
 
   // Another way to do this is to filter out products that are already in memory and avoid making the call.
-/*   const {productList, isError, error} = useProductList()
-    const product = productList?.find((product: ProductsEdge) => product.node.id === id)?.node
- */
+  /*   const {productList, isError, error} = useProductList()
+      const product = productList?.find((product: ProductsEdge) => product.node.id === id)?.node
+   */
   // To convert the component in a server component one option could be send the product data in query params
 
   if (isError) {
@@ -95,7 +94,6 @@ const ProductDetail = () => {
                     Add to cart
                   </button>
                 </>)
-
             }
           </div>
         </div>

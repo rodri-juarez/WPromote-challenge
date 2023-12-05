@@ -44,7 +44,7 @@ export function ProductCard({product}: ProductCardProps) {
       </CardBody>
       <CardFooter className="pt-0">
         <Link href={{
-          pathname: `${product.title}`,
+          pathname: `./product/${product.title}`,
           query: {id: product.id},
         }}>
           <Button

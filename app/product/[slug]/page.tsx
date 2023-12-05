@@ -1,7 +1,7 @@
 import {Metadata} from 'next'
 import {HydrationBoundary, QueryClient, dehydrate} from "@tanstack/react-query"
-import {getProduct} from "../lib/utils/getProduct"
-import ProductDetail from "../components/ProductDetail"
+import {getProduct} from "../../lib/utils/getProduct"
+import ProductDetail from "../../components/ProductDetail"
 
 export const metadata: Metadata = {
   title: 'Product Page',
