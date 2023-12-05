@@ -29,10 +29,10 @@ export function ProductCard({product}: ProductCardProps) {
       </CardHeader>
       <CardBody>
         <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium">
+          <Typography variant="h4" color="blue-gray" className="font-medium">
             {product.title}
           </Typography>
-          <Typography color="blue-gray" className="font-medium">
+          <Typography variant="h5" color="blue-gray" className="font-medium">
             $99.00
           </Typography>
         </div>
